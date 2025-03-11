@@ -13,6 +13,8 @@ from app.routes.auth import auth_router
 
 from app.routes.shopify_admin import shopify_router
 
+from app.routes.webhook import webhook_router
+
 from app.middlewares.auth import AuthMiddleware
 from app.utils.auth import get_current_user
 
@@ -52,3 +54,4 @@ async def private_route(current_user: dict = Depends(get_current_user)):
 app.include_router(auth_router)
 app.include_router(user_routes)
 app.include_router(shopify_router)
+app.include_router(webhook_router)

@@ -19,6 +19,7 @@ class UserRole(enum.Enum):
     DEV_OPS_ENGINEER = "dev_ops_engineer"
     BACKEND_ENGINEER = "backend_engineer"
 
+
 class User(BaseModelWithUUID):
     __tablename__ = "users"
 
@@ -27,8 +28,8 @@ class User(BaseModelWithUUID):
     is_active = Column(Boolean, default=True)
     is_admin = Column(Boolean, default=False)
     role = Column(Enum(UserRole), default=UserRole.OTHER)
-    #Add relationship for tasks assigned to this user
-    tasks = relationship("Task", back_populates="assignee")
+    # Add relationship for tasks assigned to this user
+    # tasks = relationship("Task", back_populates="assignee")
 
     # Not every User has to be an Employee, so no backref on the User side
 

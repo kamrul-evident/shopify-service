@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Boolean, DateTime, JSON
 
-from app.models.base import BaseModelWithUUID
+from .base import BaseModelWithUUID
 
 # from models.base import BaseModelWithUUID
 

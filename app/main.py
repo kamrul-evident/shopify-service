@@ -17,6 +17,10 @@ from app.routes.webhook import webhook_router
 
 from app.routes.shop import shop_router
 
+from app.routes.products import product_router
+
+from app.routes.order import order_router
+
 from app.middlewares.auth import AuthMiddleware
 from app.utils.auth import get_current_user
 
@@ -58,3 +62,5 @@ app.include_router(user_routes)
 app.include_router(shopify_router)
 app.include_router(webhook_router)
 app.include_router(shop_router)
+app.include_router(product_router)
+app.include_router(order_router)
